@@ -2,21 +2,17 @@
 const { Schema, model } = require("mongoose");
 //Create a viking schema here
 
-const vikingSchema = new Schema({
+const cavemanSchema = new Schema({
     firstname: {
       type: String,
-      required: true,
     },
-    familyName: {
-        type: String,
-        required: true,
-    },
-    strength: Number,
-    weapon: String,
+    friends: {
+        type: Schema.Types.ObjectId,
+        ref:"dino",
+    }
+    weapon: 
+
   });
   
   const VikingModel = model("viking", vikingSchema);
   module.exports = VikingModel;
-
-//<======Don't forget Module.export ============>
-//<================Schema=====================>
